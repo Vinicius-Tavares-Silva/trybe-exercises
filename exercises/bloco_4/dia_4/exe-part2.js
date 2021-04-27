@@ -45,6 +45,5 @@ function menorNumero(seq) {
 
 
 
-
 //Validação do exercicio
 console.log(menorNumero(seq));
