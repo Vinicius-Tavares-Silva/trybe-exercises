@@ -80,12 +80,30 @@ function createDays() {
 createDays();
 
 //2
-function createHolidayBtn(label){
- const btnContainer = document.querySelector('.buttons-container');
- const btn = document.createElement('button');
- btn.id = 'btn-holiday';
- btn.innerHTML = label;
- btnContainer.appendChild(btn);
+function createHolidayBtn(label) {
+  const btnContainer = document.querySelector('.buttons-container');
+  const btn = document.createElement('button');
+  btn.id = 'btn-holiday';
+  btn.innerHTML = label;
+  btnContainer.appendChild(btn);
 }
 
 createHolidayBtn('Feriado');
+
+//3
+let holidayBtn = document.querySelector('#btn-holiday');
+
+holidayBtn.addEventListener('click', function () {
+ backgroundChange('.holiday','#fff')
+});
+
+function backgroundChange(element, color) {
+ let days = document.querySelectorAll(element);
+ for (let day of days) {
+  if (day.style.backgroundColor === '#eee'){
+   day.style.backgroundColor = color;
+  } else{
+   day.style.backgroundColor = '#eee';
+  }
+ }
+}
