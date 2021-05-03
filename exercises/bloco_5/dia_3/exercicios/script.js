@@ -78,3 +78,14 @@ function createDays() {
 }
 
 createDays();
+
+//2
+function createHolidayBtn(label){
+ const btnContainer = document.querySelector('.buttons-container');
+ const btn = document.createElement('button');
+ btn.id = 'btn-holiday';
+ btn.innerHTML = label;
+ btnContainer.appendChild(btn);
+}
+
+createHolidayBtn('Feriado');
