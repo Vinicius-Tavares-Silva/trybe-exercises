@@ -100,10 +100,10 @@ holidayBtn.addEventListener('click', function () {
 function backgroundChange(element, color) {
  let days = document.querySelectorAll(element);
  for (let day of days) {
-  if (day.style.backgroundColor === '#eee'){
+  if (day.style.backgroundColor === ''){
    day.style.backgroundColor = color;
   } else{
-   day.style.backgroundColor = '#eee';
+   day.style.backgroundColor = '';
   }
  }
 }
