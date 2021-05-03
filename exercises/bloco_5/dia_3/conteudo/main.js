@@ -56,6 +56,20 @@ function alteraTecnologia(event){
 
 input.addEventListener('keyup',alteraTecnologia);
 
+//4
+myWebpage.addEventListener('dblclick', function (){
+ window.location.replace('https://vinicius-tavares-silva.github.io/');
+});
+
+//5
+myWebpage.addEventListener('mouseover', function(event){
+ event.target.style.color = '#FF7F50';
+})
+
+myWebpage.addEventListener('mouseleave', function(event){
+ event.target.style.color = 'white';
+})
+
 function resetText(event) {
   // O Event é passado como um parâmetro para a função.
   event.target.innerText = 'Opção reiniciada';
