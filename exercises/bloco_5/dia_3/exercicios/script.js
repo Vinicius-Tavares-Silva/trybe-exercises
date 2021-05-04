@@ -80,7 +80,7 @@ function createDays() {
 createDays();
 
 //2
-function createHolidayBtn(label, elementId) {
+function createBtn(label, elementId) {
   const btnContainer = document.querySelector('.buttons-container');
   const btn = document.createElement('button');
   btn.id = elementId;
@@ -88,7 +88,7 @@ function createHolidayBtn(label, elementId) {
   btnContainer.appendChild(btn);
 }
 
-createHolidayBtn('Feriado','btn-holiday');
+createBtn('Feriado','btn-holiday');
 
 //3
 let holidayBtn = document.querySelector('#btn-holiday');
@@ -109,7 +109,7 @@ function backgroundChange(element, color) {
 }
 
 //4
-createHolidayBtn('Sexta-feira','btn-friday');
+createBtn('Sexta-feira','btn-friday');
 
 //5
 let fridayBtn = document.querySelector('#btn-friday');
@@ -117,3 +117,18 @@ let fridayBtn = document.querySelector('#btn-friday');
 fridayBtn.addEventListener('click', function () {
  backgroundChange('.friday','#FFD700')
 });
+
+//6
+let calendarDays = document.querySelectorAll('.day');
+for (let day of calendarDays){
+day.addEventListener('mouseover',zoomIn);
+day.addEventListener('mouseleave',zoomOut);
+}
+
+function zoomIn(event){
+event.target.style.fontSize = '28px';
+}
+
+function zoomOut(event){
+ event.target.style.fontSize = '20px';
+}
