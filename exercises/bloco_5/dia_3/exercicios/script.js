@@ -80,15 +80,15 @@ function createDays() {
 createDays();
 
 //2
-function createHolidayBtn(label) {
+function createHolidayBtn(label, elementId) {
   const btnContainer = document.querySelector('.buttons-container');
   const btn = document.createElement('button');
-  btn.id = 'btn-holiday';
+  btn.id = elementId;
   btn.innerHTML = label;
   btnContainer.appendChild(btn);
 }
 
-createHolidayBtn('Feriado');
+createHolidayBtn('Feriado','btn-holiday');
 
 //3
 let holidayBtn = document.querySelector('#btn-holiday');
@@ -107,3 +107,6 @@ function backgroundChange(element, color) {
   }
  }
 }
+
+//4
+createHolidayBtn('Sexta-feira','btn-friday');
