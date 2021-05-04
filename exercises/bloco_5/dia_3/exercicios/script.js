@@ -137,27 +137,42 @@ function zoomOut(event) {
 const myTasks = document.querySelector('.my-tasks');
 
 function createTask(taskName) {
-  const task = document.createElement('span');
-  task.innerHTML = taskName;
-  myTasks.appendChild(task);
+  const tasks = document.createElement('span');
+  tasks.innerHTML = taskName;
+  myTasks.appendChild(tasks);
 }
 createTask('cozinhar');
 
 //8
 function createTaskColor(taskColorName) {
- const taskColor = document.createElement('div');
- taskColor.style.backgroundColor = taskColorName;
- taskColor.classList.add('task');
- myTasks.appendChild(taskColor);
+  const taskColor = document.createElement('div');
+  taskColor.style.backgroundColor = taskColorName;
+  taskColor.classList.add('task');
+  myTasks.appendChild(taskColor);
 }
 createTaskColor('#FF8C00');
 
 //9
-let taskSelected = document.querySelector('.task');
-taskSelected.addEventListener('click', function (){
- if (event.target.className === 'task'){
-  event.target.classList.add('task-selected');
- } else{
-  event.target.classList.remove('task-selected');
- }
-})
+let task = document.querySelector('.task');
+task.addEventListener('click', function () {
+  if (event.target.className === 'task') {
+    event.target.classList.add('task-selected');
+  } else {
+    event.target.classList.remove('task-selected');
+  }
+});
+
+//10
+
+for (let day of calendarDays) {
+  day.addEventListener('click', function () {
+   let taskSelected = document.querySelector('.task-selected');
+    if (taskSelected !== null) {
+      if (day.style.backgroundColor !== taskSelected.style.backgroundColor) {
+        day.style.backgroundColor = taskSelected.style.backgroundColor;
+      } else {
+        day.style.backgroundColor = '';
+      }
+    }
+  });
+}
