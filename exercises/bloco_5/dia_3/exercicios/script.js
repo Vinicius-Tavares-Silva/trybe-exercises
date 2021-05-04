@@ -151,3 +151,13 @@ function createTaskColor(taskColorName) {
  myTasks.appendChild(taskColor);
 }
 createTaskColor('#FF8C00');
+
+//9
+let taskSelected = document.querySelector('.task');
+taskSelected.addEventListener('click', function (){
+ if (event.target.className === 'task'){
+  event.target.classList.add('task-selected');
+ } else{
+  event.target.classList.remove('task-selected');
+ }
+})
