@@ -88,47 +88,57 @@ function createBtn(label, elementId) {
   btnContainer.appendChild(btn);
 }
 
-createBtn('Feriado','btn-holiday');
+createBtn('Feriado', 'btn-holiday');
 
 //3
 let holidayBtn = document.querySelector('#btn-holiday');
 
 holidayBtn.addEventListener('click', function () {
- backgroundChange('.holiday','#90EE90')
+  backgroundChange('.holiday', '#90EE90');
 });
 
 function backgroundChange(element, color) {
- let days = document.querySelectorAll(element);
- for (let day of days) {
-  if (day.style.backgroundColor === ''){
-   day.style.backgroundColor = color;
-  } else{
-   day.style.backgroundColor = '';
+  let days = document.querySelectorAll(element);
+  for (let day of days) {
+    if (day.style.backgroundColor === '') {
+      day.style.backgroundColor = color;
+    } else {
+      day.style.backgroundColor = '';
+    }
   }
- }
 }
 
 //4
-createBtn('Sexta-feira','btn-friday');
+createBtn('Sexta-feira', 'btn-friday');
 
 //5
 let fridayBtn = document.querySelector('#btn-friday');
 
 fridayBtn.addEventListener('click', function () {
- backgroundChange('.friday','#FFD700')
+  backgroundChange('.friday', '#FFD700');
 });
 
 //6
 let calendarDays = document.querySelectorAll('.day');
-for (let day of calendarDays){
-day.addEventListener('mouseover',zoomIn);
-day.addEventListener('mouseleave',zoomOut);
+for (let day of calendarDays) {
+  day.addEventListener('mouseover', zoomIn);
+  day.addEventListener('mouseleave', zoomOut);
 }
 
-function zoomIn(event){
-event.target.style.fontSize = '28px';
+function zoomIn(event) {
+  event.target.style.fontSize = '28px';
 }
 
-function zoomOut(event){
- event.target.style.fontSize = '20px';
+function zoomOut(event) {
+  event.target.style.fontSize = '20px';
 }
+
+//7
+const myTasks = document.querySelector('.my-tasks');
+
+function createTask(taskName) {
+  const task = document.createElement('span');
+  task.innerHTML = taskName;
+  myTasks.appendChild(task);
+}
+createTask('cozinhar');
