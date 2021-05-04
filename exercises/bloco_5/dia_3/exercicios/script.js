@@ -163,7 +163,6 @@ task.addEventListener('click', function () {
 });
 
 //10
-
 for (let day of calendarDays) {
   day.addEventListener('click', function () {
    let taskSelected = document.querySelector('.task-selected');
