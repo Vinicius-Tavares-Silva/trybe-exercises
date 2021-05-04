@@ -94,7 +94,7 @@ createHolidayBtn('Feriado','btn-holiday');
 let holidayBtn = document.querySelector('#btn-holiday');
 
 holidayBtn.addEventListener('click', function () {
- backgroundChange('.holiday','#fff')
+ backgroundChange('.holiday','#90EE90')
 });
 
 function backgroundChange(element, color) {
@@ -110,3 +110,10 @@ function backgroundChange(element, color) {
 
 //4
 createHolidayBtn('Sexta-feira','btn-friday');
+
+//5
+let fridayBtn = document.querySelector('#btn-friday');
+
+fridayBtn.addEventListener('click', function () {
+ backgroundChange('.friday','#FFD700')
+});
