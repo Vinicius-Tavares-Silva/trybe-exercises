@@ -142,3 +142,12 @@ function createTask(taskName) {
   myTasks.appendChild(task);
 }
 createTask('cozinhar');
+
+//8
+function createTaskColor(taskColorName) {
+ const taskColor = document.createElement('div');
+ taskColor.style.backgroundColor = taskColorName;
+ taskColor.classList.add('task');
+ myTasks.appendChild(taskColor);
+}
+createTaskColor('#FF8C00');
