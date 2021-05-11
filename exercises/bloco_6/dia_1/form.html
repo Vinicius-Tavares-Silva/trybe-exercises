@@ -16,23 +16,32 @@
   <fieldset class="field-set">
    <legend>Dados cadastrais</legend>
    <label for="nome">Nome</label>
-   <input required type="text" name="nome" id="nome">
+   <input maxlength="40" required type="text" name="nome" id="nome">
    <label for="email">E-mail</label>
-   <input required type="text" name="email" id="email">
+   <input maxlength="50" required type="text" name="email" id="email">
    <label for="cpf">CPF</label>
-   <input required type="text" name="cpf" id="cpf">
+   <input maxlength="11" required type="text" name="cpf" id="cpf">
    <label for="endereco">Endereço</label>
-   <input required type="text" name="endereco" id="endereco">
+   <input maxlength="200" required type="text" name="endereco" id="endereco">
    <label for="cidade">Cidade</label>
-   <input required type="text" name="cidade" id="cidade">
+   <input maxlength="28" required type="text" name="cidade" id="cidade">
    <label for="uf">Estado</label>
-   <select name="estado" id="uf">
-
-   </select>
+   <select name="estado" id="uf"></select>
    <label for="tipo-residencia-1">Casa</label>
    <input type="radio" name="residencia" id="tipo-residencia-1">
    <label for="tipo-residencia-2">Apartamento</label>
    <input type="radio" name="residencia" id="tipo-residencia-2">
+  </fieldset>
+  <fieldset class="field-set">
+   <legend>Experiencia profissional</legend>
+   <label for="cv">Resumo do Currículo</label>
+   <textarea maxlength="1000" required name="curriculo" id="cv" cols="30" rows="10"></textarea>
+   <label for="cargo">Cargo</label>
+   <input maxlength="40" required type="text" name="cargo" id="cargo">
+   <label for="descricao">Descrição do cargo</label>
+   <input maxlength="500" required type="text" name="descricao" id="descricao">
+   <label for="data">Data de início</label>
+   <input maxlength="40" required type="text" name="data" id="data">
   </fieldset>
  </div>
  <script src="script.js"></script>
