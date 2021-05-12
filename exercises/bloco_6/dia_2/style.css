@@ -1,11 +1,44 @@
-.field-set input[type=text]{
- width: 100%;
+header{
+ background-color: #198754;
+ color: white;
+ padding-bottom: 5px;
 }
 
-.field-set label{
- width: 100%;
+.bloco{
+ box-shadow: 5px 5px 25px #aaaaaa;
+ border: #919191;
+ border-radius: 1%;
+ border-color: #919191;
+ margin-top: 5px;
+ padding: 10px;
+ color: #343a40;
 }
 
-textarea{
- resize: none;
+.bloco p{
+ margin-top: 10px;
+ margin-bottom: 0px;
+}
+
+.bloco input{
+ border-color: #198754;
+}
+
+.bloco textarea{
+ border-color: #198754;
+}
+
+.bloco select{
+ border-color: #198754;
+}
+
+#uf{
+ width: 20%;
+}
+
+.form-label{
+ margin-top: 5px;
+}
+
+button{
+ margin-top: 10px;
 }
