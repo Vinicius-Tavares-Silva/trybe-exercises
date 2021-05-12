@@ -1,0 +1,11 @@
+.field-set input[type=text]{
+ width: 100%;
+}
+
+.field-set label{
+ width: 100%;
+}
+
+textarea{
+ resize: none;
+}
