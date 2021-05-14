@@ -19,6 +19,11 @@ body {
  justify-content: center;
  width: 268px;
  order: 1;
+ opacity: 0.7;
+}
+
+.logo-container:hover{
+ opacity: 1;
 }
 
 .menu-container {
@@ -41,6 +46,10 @@ body {
  font-size: 1.3rem;
  list-style: none;
  margin-right: 10px;
+}
+
+.menu-container li:hover{
+ font-size: 1.5rem;
 }
 
 .main-container {
@@ -76,6 +85,10 @@ body {
  margin: 10px;
  width: 16%;
  flex-grow: 1;
+}
+
+.card-container div:hover{
+ box-shadow: 1px 1px 5px black;
 }
 
 .aside-container {
