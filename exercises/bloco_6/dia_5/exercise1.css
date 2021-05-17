@@ -1,11 +1,12 @@
 body {
-
+ font-size: large;
+ margin: 20px;
 }
 h1 {
-
+ font-size: x-large;
 }
 h2 {
-
+ font-size: large;
 }
 
 img {
@@ -13,5 +14,38 @@ img {
 }
 
 figure {
-    margin: 0;
+    margin: 25px;
+}
+
+@media screen and (min-width: 800px){
+ body {
+  background-color: beige;
+  font-size: large;
+  margin: 40px;
+ }
+
+ h1 {
+  font-size: xx-large;
+ }
+
+ h2 {
+  font-size: x-large;
+ }
+
+ p{
+  width: 80%;
+  margin: auto;
+  text-align: justify;
+ }
+ 
+ img {
+     max-width: 100%;
+ }
+ 
+ figure {
+     margin: 25px;
+     display: inline-block;
+     margin: auto;
+ }
+ 
 }
