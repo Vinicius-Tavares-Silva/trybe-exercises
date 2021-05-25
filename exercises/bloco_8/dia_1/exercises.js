@@ -35,3 +35,24 @@ const prizeCheck = (num, bigNum) => {
   }
 };
 console.log(prizeDraw(1, prizeCheck));
+
+//3
+const rightAnswers = ['A', 'C', 'B', 'D', 'A', 'A', 'D', 'A', 'D', 'C'];
+const studentAnswers = ['A', 'N.A', 'B', 'D', 'A', 'C', 'N.A', 'A', 'D', 'B'];
+
+const results = (rightAnswers, studentAnswers, callback) =>
+  callback(rightAnswers, studentAnswers);
+
+const evaluator = (rightAnswers, studentAnswers) => {
+  let count = 0;
+  for (let index = 0; index < rightAnswers.length; index += 1) {
+    if (studentAnswers[index] === 'N.A') {
+    } else if (rightAnswers[index] === studentAnswers[index]) {
+      count += 1;
+    } else {
+      count -= 0.5;
+    }
+  }
+  return count;
+};
+console.log(results(rightAnswers, studentAnswers, evaluator));
