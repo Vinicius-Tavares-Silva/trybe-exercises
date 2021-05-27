@@ -64,3 +64,61 @@ const books = [
 ];
 
 // Adicione o código do exercício aqui:
+let expectedResult = [
+ 'As Crônicas de Gelo e Fogo - Fantasia - George R. R. Martin',
+ 'O Senhor dos Anéis - Fantasia - J. R. R. Tolkien',
+ 'Fundação - Ficção Científica - Isaac Asimov',
+ 'Duna - Ficção Científica - Frank Herbert',
+ 'A Coisa - Terror - Stephen King',
+ 'O Chamado de Cthulhu - Terror - H. P. Lovecraft',
+];
+
+function formatedBookNames() {
+ // escreva seu código aqui
+ const bookNames = books.map((book) => `${book.name} - ${book.genre} - ${book.author.name}`)
+ return bookNames
+}
+
+assert.deepStrictEqual(formatedBookNames(), expectedResult);
+
+expectedResult = [
+ {
+   age: 31,
+   author: 'Isaac Asimov',
+ },
+ {
+   age: 38,
+   author: 'H. P. Lovecraft',
+ },
+ {
+   age: 39,
+   author: 'Stephen King',
+ },
+ {
+   age: 43,
+   author: 'George R. R. Martin',
+ },
+ {
+   age: 45,
+   author: 'Frank Herbert',
+ },
+ {
+   age: 62,
+   author: 'J. R. R. Tolkien',
+ },
+];
+
+function nameAndAge() {
+ // escreva seu código aqui
+ const authorNameAge = books.map((book) => {
+  return {
+   age: (book.releaseYear - book.author.birthYear),
+   author: book.author.name,
+  }
+ })
+ authorNameAge.sort((a, b) => a.age - b.age);
+ return authorNameAge
+}
+
+assert.deepStrictEqual(nameAndAge(), expectedResult);
+
