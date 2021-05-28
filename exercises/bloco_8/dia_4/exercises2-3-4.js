@@ -68,7 +68,29 @@ let expectedResult = 43;
 
 function averageAge() {
   // escreva seu código aqui
-  return books.reduce((avgAge,book) => (avgAge + (book.releaseYear - book.author.birthYear)), 0)/books.length;
+  return (
+    books.reduce(
+      (avgAge, book) => avgAge + (book.releaseYear - book.author.birthYear),
+      0
+    ) / books.length
+  );
 }
 
 assert.strictEqual(averageAge(), expectedResult);
+
+expectedResult =
+  'George R. R. Martin, J. R. R. Tolkien, Isaac Asimov, Frank Herbert, Stephen King, H. P. Lovecraft.';
+
+function reduceNames() {
+  // escreva seu código aqui
+  const authorNames = books.reduce((acc, book, index) => {
+    if (index === books.length - 1) {
+     return `${acc}${book.author.name}.`
+    } else {
+     return `${acc}${book.author.name}, `;
+    }
+  }, ' ');
+  return authorNames.trim();
+}
+
+assert.strictEqual(reduceNames(), expectedResult);
