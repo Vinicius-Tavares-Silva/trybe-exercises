@@ -94,3 +94,26 @@ function reduceNames() {
 }
 
 assert.strictEqual(reduceNames(), expectedResult);
+
+expectedResult = {
+ id: 1,
+ name: 'As Crônicas de Gelo e Fogo',
+ genre: 'Fantasia',
+ author: {
+   name: 'George R. R. Martin',
+   birthYear: 1948,
+ },
+ releaseYear: 1991,
+}
+
+function longestNamedBook() {
+ // escreva seu código aqui
+ return books.reduce((biggestBook, currentBook) => {
+  if (currentBook.name.length > biggestBook.name.length) {
+    return currentBook;
+  }
+  return biggestBook;
+});
+}
+
+assert.deepStrictEqual(longestNamedBook(), expectedResult);
