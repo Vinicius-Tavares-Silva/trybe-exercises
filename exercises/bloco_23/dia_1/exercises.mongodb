@@ -1,0 +1,18 @@
+// 1
+db.bios.find({_id: 8})
+
+
+// 2
+db.bios.find({_id: 8}, {_id: true, name: true})
+
+// 3
+db.bios.find({_id: 8}, {_id: false, name: true, birth: true})
+
+// 4
+db.bios.find({'name.first': 'John'})
+
+// 5
+db.bios.find().limit(3)
+
+// 6
+db.bios.find().limit(2).skip(5)
